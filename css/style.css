@@ -1,0 +1,123 @@
+
+/* reset */
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0}
+header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block}
+table{border-collapse:collapse;border-spacing:0}
+caption,th{font-weight:normal;text-align:left}
+html,body,fieldset,img,iframe,abbr{border:0}
+i,cite,em,var,address,dfn{font-style:normal}
+[hidefocus],summary{outline:0}
+li{list-style:none}
+h1,h2,h3,h4,h5,h6,small{font-size:100%}
+sup,sub{font-size:83%}
+pre,code,kbd,samp{font-family:inherit}
+q:before,q:after{content:'none'}
+textarea{overflow:auto;resize:none}
+label,summary{cursor:default}
+a,button{cursor:pointer}
+h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold}
+del,ins,u,s,a,a:hover{text-decoration:none}
+body,textarea,input,button,select,keygen,legend{font:12px/1.14 arial,\5b8b\4f53;color:#333;outline:0}
+.cl:after{display:block;visibility:hidden;clear:both;height:0;content:'.'}
+.cl{zoom:1}
+img{vertical-align:middle;}
+
+html,body{height:100%;}
+body{background:#000;overflow:hidden;}
+.wrap{height:100%;}
+.mg{height:100%;padding:5px;box-sizing:border-box;-webkit-animation:1s bounceInUp ease 0s;box-sizing:border-box;animation:1s bounceInUp ease 0s;}
+
+.card{float:left;width:16.66%;height:25%;text-align:center;padding:5px;box-sizing:border-box;-webkit-perspective: 500px;perspective: 500px;}
+.card img{max-width:100%;max-height:100%;}
+.card .box{background:#fff;width:100%;height:100%;position:relative;-webkit-transform-style: preserve-3d;transform-style: preserve-3d;-webkit-transition: .4s ease-in-out;transition: .4s ease-in-out;}
+.card .front,
+.card .back{width:100%;height:100%;position:absolute;top:0;left:0;padding:10px;box-sizing:border-box;-webkit-backface-visibility: hidden;backface-visibility: hidden;}
+.card .front{-webkit-transform: rotateY(-180deg);transform: rotateY(-180deg);}
+
+.card .box.pick,
+.card .box.match{-webkit-transform: rotateY(180deg);transform: rotateY(180deg);}
+.card .box.match{-webkit-animation: 1s matchA ease-in-out .5s; animation: 1s matchA ease-in-out .5s;}
+
+@media (max-width: 800px) {
+	.card{width:25%;height:16.66%;}
+	.card .front,
+	.card .back{padding:5px;}
+}
+
+@-webkit-keyframes matchA {
+	0% {background: #FAFFB7;box-shadow: 0 0 40px #FAFFB7 } 
+	100% {background: white; } 
+} 
+@keyframes matchA {
+	0% {background: #FAFFB7; box-shadow: 0 0 40px #FAFFB7} 
+	100% {background: white; } 
+}
+
+@-webkit-keyframes bounceInUp {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 3000px, 0);
+    transform: translate3d(0, 3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -5px, 0);
+    transform: translate3d(0, -5px, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounceInUp {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 3000px, 0);
+    transform: translate3d(0, 3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -5px, 0);
+    transform: translate3d(0, -5px, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
